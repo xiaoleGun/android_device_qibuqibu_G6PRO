@@ -58,6 +58,9 @@ function blob_fixup() {
         vendor/lib/egl/libGLES_mali.so|vendor/lib/hw/gralloc.mt6580.so|vendor/lib/hw/hwcomposer.mt6580.so)
             "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
             ;;
+        vendor/lib/libnvram.so)
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            ;;
     esac
 }
 
