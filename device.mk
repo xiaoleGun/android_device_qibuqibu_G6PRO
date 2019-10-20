@@ -181,6 +181,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     libsensorndkbridge
 
+# Shims
+PRODUCT_PACKAGES += \
+    libbase_shim
+
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 27
 
