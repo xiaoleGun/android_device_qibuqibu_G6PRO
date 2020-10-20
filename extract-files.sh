@@ -79,6 +79,9 @@ function blob_fixup() {
         vendor/bin/netdagent)
             "${PATCHELF}" --replace-needed "liblogwrap.so" "liblogwrap-v27.so" "${2}"
             ;;
+        vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
+            "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
+            ;;
         vendor/lib/hw/audio.primary.mt6580.so)
             sed -i 's/\/system\/lib\([^\/])/\/vendor\/lib\1/g' "${2}"
             ;;
