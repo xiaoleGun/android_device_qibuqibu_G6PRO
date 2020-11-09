@@ -79,6 +79,9 @@ function blob_fixup() {
         vendor/bin/netdagent)
             "${PATCHELF}" --replace-needed "liblogwrap.so" "liblogwrap-v27.so" "${2}"
             ;;
+        vendor/etc/init/android.hardware.sensors@1.0-service-mediatek.rc)
+            sed -i 's/group system readproc/group system readproc input/g' "$2"
+            ;;
     esac
 }
 
