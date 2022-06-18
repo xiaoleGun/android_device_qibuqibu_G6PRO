@@ -186,7 +186,8 @@ PRODUCT_PACKAGES += \
 
 # Shims
 PRODUCT_PACKAGES += \
-    libbase_shim
+    libbase_shim \
+    libcamera_shim
 
 # Shipping API level
 PRODUCT_SHIPPING_API_LEVEL := 27

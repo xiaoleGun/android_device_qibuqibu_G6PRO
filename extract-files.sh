@@ -73,6 +73,9 @@ function blob_fixup() {
         vendor/lib/hw/android.hardware.camera.provider@2.4-impl-mediatek.so)
             "${PATCHELF}" --replace-needed "libhidltransport.so" "libhidltransport-v27.so" "${2}"
             ;;
+        vendor/lib/libcam.client.so)
+            "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
+            ;;
     esac
 }
 
