@@ -13,6 +13,17 @@ PRODUCT_PACKAGES += \
 # Init
 PRODUCT_PACKAGES += \
     fstab.mt6580 \
+    init.connectivity.rc \
+    init.modem.rc \
+    init.mt6580.rc \
+    init.mt6580.usb.rc \
+    init.nvdata.rc \
+    init.project.rc \
+    init.sensor_1_0.rc \
+    ueventd.mt6580.rc
+
+# Overlays
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Overlays
 PRODUCT_ENFORCE_RRO_TARGETS := *
