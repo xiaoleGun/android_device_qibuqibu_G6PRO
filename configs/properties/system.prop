@@ -1,0 +1,34 @@
+#
+# system.prop for mt6580
+#
+
+# Audio
+ro.audio.silent=0
+
+# Camera
+ro.camera.sound.forced=0
+
+# Display
+debug.hwui.render_dirty_regions=false
+ro.opengles.version=131072
+
+# Kernel
+ro.kernel.zio=38,108,105,16
+sys.ipo.pwrdncap=2
+
+# RIL
+rild.libargs=-d /dev/ttyC0
+rild.libpath=mtk-ril.so
+
+# USB
+ro.sys.usb.bicr=no
+ro.sys.usb.charging.only=yes
+ro.sys.usb.mtp.whql.enable=0
+ro.sys.usb.storage.type=mtp
+
+# WiFi
+ro.mediatek.wlan.p2p=1
+ro.mediatek.wlan.wsc=1
+wifi.direct.interface=p2p0
+wifi.interface=wlan0
+wifi.tethering.interface=ap0
