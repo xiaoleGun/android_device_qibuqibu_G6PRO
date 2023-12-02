@@ -17,6 +17,9 @@ TARGET_CPU_VARIANT_RUNTIME := generic
 # APEX
 OVERRIDE_TARGET_FLATTEN_APEX := true
 
+# Audio
+USE_XML_AUDIO_POLICY_CONF := 1
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := k80_bsp
 TARGET_NO_BOOTLOADER := true
@@ -59,3 +62,15 @@ TARGET_VENDOR_PROP += $(DEVICE_PATH)/configs/properties/vendor.prop
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.mt6580
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+
+# Security patch level
+VENDOR_SECURITY_PATCH := 2019-10-05
+
+# VNDK
+BOARD_VNDK_VERSION := current
+
+# Wifi
+WIFI_HIDL_FEATURE_DUAL_INTERFACE := true
+
+# Inherit the proprietary files
+include vendor/qibuqibu/G6PRO/BoardConfigVendor.mk
