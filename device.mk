@@ -4,6 +4,9 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# Setup dalvik vm configs
+$(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
+
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
