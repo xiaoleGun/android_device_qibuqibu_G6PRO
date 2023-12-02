@@ -25,6 +25,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_SCREEN_DENSITY := 120
 
 # HIDL
+DEVICE_MANIFEST_FILE := $(DEVICE_PATH)/configs/vintf/manifest.xml
 DEVICE_MATRIX_FILE := $(DEVICE_PATH)/configs/vintf/compatibility_matrix.xml
 
 # Kernel
