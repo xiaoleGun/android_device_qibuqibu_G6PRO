@@ -141,7 +141,6 @@ vendor/firmware/soc_fm_v1_coeff.bin
 vendor/firmware/soc_fm_v1_patch.bin
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.default.so
 vendor/lib/hw/libSoftGatekeeper.so
 
 # Kernel modules
