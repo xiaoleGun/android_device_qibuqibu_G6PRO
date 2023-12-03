@@ -28,6 +28,7 @@ ro.mtk_fd_support=1
 
 # Display
 debug.sf.disable_backpressure=1
+ro.hardware.egl=mali
 ro.opengles.version=131072
 ro.mtk_pq_color_mode=1
 ro.mtk_pq_support=2
