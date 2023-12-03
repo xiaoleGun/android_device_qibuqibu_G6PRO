@@ -155,7 +155,6 @@ vendor/firmware/soc_fm_v1_patch.bin
 vendor/lib/vendor.mediatek.hardware.gnss@1.1_vendor.so
 
 # Gatekeeper
-vendor/lib/hw/gatekeeper.default.so
 vendor/lib/hw/libSoftGatekeeper.so
 
 # Kernel modules

@@ -18,4 +18,13 @@ $(LIBGUI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 
 ALL_DEFAULT_INSTALLED_MODULES += $(LIBGUI_SYMLINK)
 
+GATEKEEPER_SYMLINK := $(TARGET_OUT_VENDOR)/lib/hw/gatekeeper.default.so 
+$(GATEKEEPER_SYMLINK): $(LOCAL_INSTALLED_MODULE)
+	@echo "libSoftGatekeeper.so link: $@"
+	@mkdir -p $(dir $@)
+	@rm -rf $@
+	$(hide) ln -sf /vendor/lib/hw/libSoftGatekeeper.so $@
+
+ALL_DEFAULT_INSTALLED_MODULES += $(GATEKEEPER_SYMLINK)
+
 endif
