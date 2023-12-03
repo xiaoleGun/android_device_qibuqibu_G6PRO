@@ -55,7 +55,7 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/egl/libGLES_mali.so|vendor/lib/hw/gralloc.mt6580.so)
+        vendor/lib/egl/libGLES_mali.so|vendor/lib/hw/gralloc.mt6580.so|vendor/lib/hw/hwcomposer.mt6580.so)
             "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
             ;;
     esac
