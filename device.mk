@@ -46,6 +46,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.bluetooth@1.0.vendor
 
+# Boot animation
+TARGET_SCREEN_HEIGHT := 480
+TARGET_SCREEN_WIDTH := 800
+
 # Camera
 PRODUCT_PACKAGES += \
     android.hardware.camera.common@1.0.vendor \
