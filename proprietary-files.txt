@@ -4,6 +4,9 @@
 vendor/etc/audio_param/AudioParamOptions.xml
 
 # Audio
+lib/android.hardware.audio.common@2.0-util.so:vendor/lib/android.hardware.audio.common@2.0-util-v27.so
+lib/android.hardware.audio.common@2.0.so:vendor/lib/android.hardware.audio.common@2.0-v27.so
+lib/android.hardware.audio@2.0.so:vendor/lib/android.hardware.audio@2.0-v27.so
 lib/libaudiocompensationfilter.so
 lib/libaudiocomponentengine.so
 lib/libaudiocustparam.so
@@ -14,6 +17,7 @@ lib/libbessound_hd_mtk.so
 lib/libblisrc32.so
 vendor/bin/hw/android.hardware.audio@2.0-service-mediatek
 vendor/etc/init/android.hardware.audio@2.0-service-mediatek.rc
+vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
 vendor/lib/hw/android.hardware.audio@2.0-impl-mediatek.so
 vendor/lib/hw/audio.primary.mt6580.so
 vendor/lib/hw/audio.r_submix.mt6580.so
