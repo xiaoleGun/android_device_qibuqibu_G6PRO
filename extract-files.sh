@@ -61,6 +61,15 @@ function blob_fixup() {
         vendor/lib/libnvram.so)
             "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
+        vendor/lib/android.hardware.audio@2.0-v27.so)
+            "${PATCHELF}" --replace-needed "android.hardware.audio.common@2.0.so" "android.hardware.audio.common@2.0-v27.so" "${2}"
+            ;;
+        vendor/lib/hw/android.hardware.audio@2.0-impl-mediatek.so)
+            "${PATCHELF}" --replace-needed "android.hardware.audio.common@2.0-util.so" "android.hardware.audio.common@2.0-util-v27.so" "${2}"
+            ;;
+        vendor/lib/vendor.mediatek.hardware.audio@2.1_vendor.so)
+            "${PATCHELF}" --replace-needed "android.hardware.audio@2.0.so" "android.hardware.audio@2.0-v27.so" "${2}"
+            ;;
     esac
 }
 
