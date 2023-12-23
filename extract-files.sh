@@ -76,6 +76,9 @@ function blob_fixup() {
         vendor/lib/libcam.client.so)
             "${PATCHELF}" --add-needed "libcamera_shim.so" "${2}"
             ;;
+        vendor/bin/netdagent)
+            "${PATCHELF}" --replace-needed "liblogwrap.so" "liblogwrap-v27.so" "${2}"
+            ;;
     esac
 }
 

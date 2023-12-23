@@ -281,6 +281,7 @@ vendor/lib/libpowerhalwrap.so
 vendor/lib/vendor.mediatek.hardware.power@1.1_vendor.so
 
 # Radio
+lib/liblogwrap.so:vendor/lib/liblogwrap-v27.so
 lib/vendor.mediatek.hardware.radio@2.0.so
 vendor/bin/ccci_fsd
 vendor/bin/ccci_mdinit
