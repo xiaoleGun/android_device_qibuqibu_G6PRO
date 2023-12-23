@@ -52,6 +52,7 @@ vendor/lib/libbluetoothem_mtk.so
 vendor/lib/libbt-vendor.so
 
 # Camera
+lib/libhidltransport.so:vendor/lib/libhidltransport-v27.so
 lib/vendor.mediatek.hardware.camera.device@1.1.so
 vendor/bin/hw/camerahalserver
 vendor/bin/mtkcam-debug
