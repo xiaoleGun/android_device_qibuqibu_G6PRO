@@ -70,7 +70,7 @@ function blob_fixup() {
         vendor/lib/vendor.mediatek.hardware.audio@2.1_vendor.so)
             "${PATCHELF}" --replace-needed "android.hardware.audio@2.0.so" "android.hardware.audio@2.0-v27.so" "${2}"
             ;;
-        vendor/lib/hw/android.hardware.camera.provider@2.4-impl-mediatek.so)
+        vendor/lib/hw/android.hardware.camera.provider@2.4-impl-mediatek.so|vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0_vendor.so)
             "${PATCHELF}" --replace-needed "libhidltransport.so" "libhidltransport-v27.so" "${2}"
             ;;
         vendor/lib/libcam.client.so)
