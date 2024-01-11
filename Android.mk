@@ -9,6 +9,12 @@ LOCAL_PATH := $(call my-dir)
 ifeq ($(TARGET_DEVICE),G6PRO)
 include $(call all-subdir-makefiles,$(LOCAL_PATH))
 
+# Kernel headers
+$(TARGET_OUT_INTERMEDIATES)/KERNEL_OBJ/usr: $(wildcard device/qibuqibu/G6PRO-kernel/kernel-headers/*)
+	rm -rf $@
+	mkdir -p $@/include
+	cp -a device/qibuqibu/G6PRO-kernel/kernel-headers/. $@/include
+
 LIBGUI_SYMLINK := $(TARGET_OUT_VENDOR)/lib/libgui.so
 $(LIBGUI_SYMLINK): $(LOCAL_INSTALLED_MODULE)
 	@echo "libgui.so link: $@"

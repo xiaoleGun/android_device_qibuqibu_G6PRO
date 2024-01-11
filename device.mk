@@ -111,6 +111,10 @@ PRODUCT_PACKAGES += \
     init.sensor_1_0.rc \
     ueventd.mt6580.rc
 
+# Kernel
+PRODUCT_VENDOR_KERNEL_HEADERS += \
+    $(LOCAL_PATH)/prebuilts/kernel-headers
+
 # Keymaster
 PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-impl \
