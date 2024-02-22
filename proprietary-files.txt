@@ -355,6 +355,8 @@ vendor/lib/hw/android.hardware.vibrator@1.0-impl.so
 vendor/lib/hw/vibrator.default.so
 
 # WiFi
+lib/android.hardware.wifi@1.0.so:vendor/lib/android.hardware.wifi@1.0-v27.so
+lib/android.hardware.wifi@1.1.so:vendor/lib/android.hardware.wifi@1.1-v27.so
 vendor/bin/hostapd
 vendor/bin/hw/android.hardware.wifi@1.0-service
 vendor/bin/hw/wpa_supplicant

@@ -58,7 +58,7 @@ function blob_fixup() {
         vendor/lib/egl/libGLES_mali.so|vendor/lib/hw/gralloc.mt6580.so|vendor/lib/hw/hwcomposer.mt6580.so|vendor/lib/libmtkcam_stdutils.so)
             "${PATCHELF}" --add-needed "libutilscallstack.so" "${2}"
             ;;
-        vendor/lib/libnvram.so|vendor/lib/hw/android.hardware.sensors@1.0-impl-mediatek.so|vendor/lib/libhidltransport-v27.so|vendor/bin/hw/android.hardware.wifi@1.0-service|vendor/bin/hw/android.hardware.drm@1.0-service.widevine)
+        vendor/lib/libnvram.so|vendor/lib/hw/android.hardware.sensors@1.0-impl-mediatek.so|vendor/lib/libhidltransport-v27.so|vendor/bin/hw/android.hardware.drm@1.0-service.widevine)
             "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
         vendor/lib/android.hardware.audio@2.0-v27.so)
@@ -78,6 +78,11 @@ function blob_fixup() {
             ;;
         vendor/bin/netdagent)
             "${PATCHELF}" --replace-needed "liblogwrap.so" "liblogwrap-v27.so" "${2}"
+            ;;
+        vendor/bin/hw/android.hardware.wifi@1.0-service)
+            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.wifi@1.0.so" "android.hardware.wifi@1.0-v27.so" "${2}"
+            "${PATCHELF}" --replace-needed "android.hardware.wifi@1.1.so" "android.hardware.wifi@1.1-v27.so" "${2}"
             ;;
     esac
 }
