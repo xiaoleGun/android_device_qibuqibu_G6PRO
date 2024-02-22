@@ -103,6 +103,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.mt6580 \
     init.connectivity.rc \
+    init.display.rc \
     init.modem.rc \
     init.mt6580.rc \
     init.mt6580.usb.rc \

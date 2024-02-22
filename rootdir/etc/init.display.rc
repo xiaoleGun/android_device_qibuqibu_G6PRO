@@ -1,0 +1,9 @@
+on property:sys.boot_completed=1
+    start set_screen_size
+
+service set_screen_size /system/bin/wm size 268x800
+    class main
+    user root
+    group root system
+    disabled
+    oneshot

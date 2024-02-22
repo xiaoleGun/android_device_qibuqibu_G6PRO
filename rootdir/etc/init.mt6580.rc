@@ -7,6 +7,9 @@ import /vendor/etc/init/hw/init.project.rc
 import /FWUpgradeInit.rc
 import /vendor/etc/init/hw/init.sensor_1_0.rc
 
+#[xiaoleGun: Specific changes to the dictionary pen screen]
+import /vendor/etc/init/hw/init.display.rc
+
 #[denqin start]mct 2018.0505
 # add for cdfinger start
 import /init.cdfinger.rc
