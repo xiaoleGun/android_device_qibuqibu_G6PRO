@@ -374,6 +374,7 @@ vendor/etc/init/init.wmt_drv.rc
 vendor/etc/init/wifi2agps.rc
 vendor/etc/init/wifimac.rc
 vendor/lib/libwapi.so
+vendor/lib/libwifi-hal.so
 vendor/lib/libwpa_client.so
 vendor/lib/vendor.mediatek.hardware.wifi.hostapd@1.0_vendor.so
 vendor/lib/vendor.mediatek.hardware.wifi.supplicant@1.1_vendor.so
