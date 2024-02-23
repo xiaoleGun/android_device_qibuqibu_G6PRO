@@ -128,6 +128,9 @@ PRODUCT_PACKAGES += \
     android.hardware.keymaster@3.0-service
 
 # Media
+PRODUCT_PACKAGES += \
+    libstdc++
+
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/media/media_codecs.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs.xml \
     $(LOCAL_PATH)/configs/media/media_codecs_mediatek_audio.xml:$(TARGET_COPY_OUT_VENDOR)/etc/media_codecs_mediatek_audio.xml \
