@@ -14,6 +14,8 @@ $(call inherit-product, vendor/qibuqibu/G6PRO/G6PRO-vendor.mk)
 PRODUCT_PACKAGES += \
     android.hardware.audio@2.0-impl \
     android.hardware.audio.effect@2.0-impl \
+    android.hardware.soundtrigger@2.0-impl \
+    android.hardware.soundtrigger@2.0-service \
     audio.a2dp.default \
     audio.bluetooth.default \
     audio.r_submix.default \
