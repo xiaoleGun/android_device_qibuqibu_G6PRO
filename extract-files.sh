@@ -84,6 +84,9 @@ function blob_fixup() {
             "${PATCHELF}" --replace-needed "android.hardware.wifi@1.0.so" "android.hardware.wifi@1.0-v27.so" "${2}"
             "${PATCHELF}" --replace-needed "android.hardware.wifi@1.1.so" "android.hardware.wifi@1.1-v27.so" "${2}"
             ;;
+        vendor/lib/hw/audio.primary.mt6580.so)
+            sed -i 's/\/system\/lib\([^\/])/\/vendor\/lib\1/g' "${2}"
+            ;;
     esac
 }
 

@@ -8,7 +8,7 @@ lib/android.hardware.audio.common@2.0-util.so:vendor/lib/android.hardware.audio.
 lib/android.hardware.audio.common@2.0.so:vendor/lib/android.hardware.audio.common@2.0-v27.so
 lib/android.hardware.audio@2.0.so:vendor/lib/android.hardware.audio@2.0-v27.so
 lib/libaudiocompensationfilter.so
-lib/libaudiocomponentengine.so
+lib/libaudiocomponentengine.so:vendor/lib/libaudiocomponentengine.so
 lib/libaudiocustparam.so
 lib/libaudiodcrflt.so
 lib/libaudiopolicycustomextensions.so
