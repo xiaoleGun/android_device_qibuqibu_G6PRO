@@ -31,19 +31,25 @@ vendor/lib/vendor.mediatek.hardware.audio@5.1.so|9d3d59ae1b0f9b3f1e2e69faec1118d
 # Audio configs - from A2_H01_S001_20200703_RU
 vendor/etc/audio_param/AudioParamOptions.xml|cfcbe8df7f862f3f91bcbd3087766d48dfa67f42
 
-# Bluetooth
+# Bluetooth - from A2_H01_S001_20200703_RU
 lib/libmtkbluetooth_jni.so
 vendor/bin/autobt
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-mediatek
-vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek.rc
+vendor/etc/init/android.hardware.bluetooth@1.0-service-mediatek-lazy.rc
 vendor/etc/init/init.bt_drv.rc
+vendor/lib/hw/android.hardware.bluetooth.audio@2.0-impl-mediatek.so
 vendor/lib/hw/android.hardware.bluetooth@1.0-impl-mediatek.so
+vendor/lib/libbluetooth_audio_session_mediatek.so
 vendor/lib/libbluetooth_hw_test.so
 vendor/lib/libbluetooth_mtk.so
 vendor/lib/libbluetooth_mtk_pure.so
 vendor/lib/libbluetooth_relayer.so
 vendor/lib/libbluetoothem_mtk.so
 vendor/lib/libbt-vendor.so
+vendor/lib/libmsbc_mtk.so
+
+# Bluetooth Firmware - from A2_H01_S001_20200703_RU
+vendor/firmware/BT_FW.cfg
 
 # Camera
 lib/libhidltransport.so:vendor/lib/libhidltransport-v27.so
