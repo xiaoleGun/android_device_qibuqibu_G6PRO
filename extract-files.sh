@@ -61,15 +61,6 @@ function blob_fixup() {
         vendor/lib/libnvram.so|vendor/lib/hw/android.hardware.sensors@1.0-impl-mediatek.so|vendor/lib/libhidltransport-v27.so|vendor/bin/hw/android.hardware.drm@1.0-service.widevine)
             "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
             ;;
-        vendor/lib/android.hardware.audio@2.0-v27.so)
-            "${PATCHELF}" --replace-needed "android.hardware.audio.common@2.0.so" "android.hardware.audio.common@2.0-v27.so" "${2}"
-            ;;
-        vendor/lib/hw/android.hardware.audio@2.0-impl-mediatek.so)
-            "${PATCHELF}" --replace-needed "android.hardware.audio.common@2.0-util.so" "android.hardware.audio.common@2.0-util-v27.so" "${2}"
-            ;;
-        vendor/lib/vendor.mediatek.hardware.audio@2.1_vendor.so)
-            "${PATCHELF}" --replace-needed "android.hardware.audio@2.0.so" "android.hardware.audio@2.0-v27.so" "${2}"
-            ;;
         vendor/lib/hw/android.hardware.camera.provider@2.4-impl-mediatek.so|vendor/lib/vendor.mediatek.hardware.camera.ccap@1.0_vendor.so)
             "${PATCHELF}" --replace-needed "libhidltransport.so" "libhidltransport-v27.so" "${2}"
             ;;
@@ -81,9 +72,6 @@ function blob_fixup() {
             ;;
         vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek)
             "${PATCHELF}" --replace-needed "libwifi-hal.so" "libwifi-hal-mtk.so" "${2}"
-            ;;
-        vendor/lib/hw/audio.primary.mt6580.so)
-            sed -i 's/\/system\/lib\([^\/])/\/vendor\/lib\1/g' "${2}"
             ;;
         vendor/etc/init/init.wlan_drv.rc)
             sed -i 's/wlan_drv_${ro.vendor.wlan.gen}/wlan_drv/g' "${2}"

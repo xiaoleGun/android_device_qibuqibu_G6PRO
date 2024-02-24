@@ -1,41 +1,35 @@
 # All unpinned blobs below are extracted from full_k80_bsp-user 8.1.0 O11019 1641787554 release-keys
 
-# Audio configs
-vendor/etc/audio_param/AudioParamOptions.xml
+# Audio - from A2_H01_S001_20200703_RU
+lib/libaudiocompensationfilter.so|4ec5c58be47b71adf0666a871f1331eae6287dda
+lib/libaudiocomponentengine.so|a0e2ee24d5eee449097aeae2784410dcf73169f9
+lib/libaudiopolicycustomextensions.so|ae595be19d838127d2d91f31e7cd2b1da458ee46
+lib/libaudioutilmtk.so|2e2789bf92ebb0e36a02d90a96b4c770ddf81609
+lib/libbessound_hd_mtk.so|c40526566fdc71dde4f5ba8efef54f51a516a26c
+lib/libblisrc.so|206901bab3fd21ea6df0c6b234c478364e22ee6a
+vendor/bin/audiocmdservice_atci|5f06b4086899af08ba6594c7c40169a980956f0f
+vendor/bin/hw/android.hardware.audio@5.0-service-mediatek|d61af62aebeb10ae722a279e50898a9272738cc6
+vendor/etc/init/android.hardware.audio@5.0-service-mediatek.rc|d2f25ca256ef25f6b98f38431d545fe671cf76b3
+vendor/etc/init/audiocmdservice_atci.rc|c2bda8827aa2dff8c502f2ecbfcf535b6517ca89
+vendor/lib/hw/android.hardware.audio@5.0-impl-mediatek.so|2743130ac54d76efa3e6d45d6dc5940187715171
+vendor/lib/hw/audio.primary.mt6580.so|0d4994d64da54cf5b71446ba869a71cf2d6bf98f
+vendor/lib/hw/audio.r_submix.mt6580.so|b2eb6c885fb6ff3cc7ee16ff34d13105ed7da4e6
+vendor/lib/libaudio_param_parser-vnd.so|265b8a29dcb503dc075d280047b3994b73970140
+vendor/lib/libaudiocompensationfilter_vendor.so|2dd20e7542ce544b3d39177ef473022ab3a75f86
+vendor/lib/libaudiocomponentengine_vendor.so|4fc709936a567dd8a72bbc56aaaac5cc9402e312
+vendor/lib/libaudiocustparam_vendor.so|b8f72f10764d886f08f76ed6d260075ecddb8a33
+vendor/lib/libaudiodcrflt_vendor.so|396910976d091b7025ed8932c0413b2fc9d80370
+vendor/lib/libaudiofmtconv.so|c872936d9d728d6614bb2b3618ff9cd0c8f1567a
+vendor/lib/libaudioprimarydevicehalifclient.so|ba3f5b41328562c09c33e5396d6932a51b57ed6a
+vendor/lib/libaudiotoolkit_vendor.so|f5eab236b195d3f43a38092982b3a06bdf61e6ac
+vendor/lib/libbessound_hd_mtk_vendor.so|be26ab3e2abc594f4f600a66856be1f3dfba36c1
+vendor/lib/libblisrc32_vendor.so|bb3bf6f91408462dda1185dde021069ce5823862
+vendor/lib/libcvsd_mtk.so|a7393d78e3bd64432e8c8f0f51584092ce366f97
+vendor/lib/libspeech_enh_lib.so|6ccb349f9c5bc931c11b0b1c9467083874833c56
+vendor/lib/vendor.mediatek.hardware.audio@5.1.so|9d3d59ae1b0f9b3f1e2e69faec1118d196fc81e2
 
-# Audio
-lib/android.hardware.audio.common@2.0-util.so:vendor/lib/android.hardware.audio.common@2.0-util-v27.so
-lib/android.hardware.audio.common@2.0.so:vendor/lib/android.hardware.audio.common@2.0-v27.so
-lib/android.hardware.audio@2.0.so:vendor/lib/android.hardware.audio@2.0-v27.so
-lib/libaudiocompensationfilter.so
-lib/libaudiocomponentengine.so:vendor/lib/libaudiocomponentengine.so
-lib/libaudiocustparam.so
-lib/libaudiodcrflt.so
-lib/libaudiopolicycustomextensions.so
-lib/libaudiotoolkit.so
-lib/libbessound_hd_mtk.so
-lib/libblisrc32.so
-vendor/bin/hw/android.hardware.audio@2.0-service-mediatek
-vendor/etc/init/android.hardware.audio@2.0-service-mediatek.rc
-vendor/lib/hw/android.hardware.audio.effect@2.0-impl.so
-vendor/lib/hw/android.hardware.audio@2.0-impl-mediatek.so
-vendor/lib/hw/audio.primary.mt6580.so
-vendor/lib/hw/audio.r_submix.mt6580.so
-vendor/lib/hw/audio.usb.mt6580.so
-vendor/lib/libaedv.so
-vendor/lib/libaudiocompensationfilter_vendor.so
-vendor/lib/libaudiocomponentengine_vendor.so
-vendor/lib/libaudiocustparam_vendor.so
-vendor/lib/libaudiodcrflt_vendor.so
-vendor/lib/libaudioprimarydevicehalifclient.so
-vendor/lib/libaudiosetting.so
-vendor/lib/libaudiotoolkit_vendor.so
-vendor/lib/libbessound_hd_mtk_vendor.so
-vendor/lib/libblisrc32_vendor.so
-vendor/lib/libcvsd_mtk.so
-vendor/lib/libmrdumpv.so
-vendor/lib/libspeech_enh_lib.so
-vendor/lib/vendor.mediatek.hardware.audio@2.1_vendor.so
+# Audio configs - from A2_H01_S001_20200703_RU
+vendor/etc/audio_param/AudioParamOptions.xml|cfcbe8df7f862f3f91bcbd3087766d48dfa67f42
 
 # Bluetooth
 lib/libmtkbluetooth_jni.so
