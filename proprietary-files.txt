@@ -309,7 +309,9 @@ vendor/etc/virtual-spn-conf-by-efpnn.xml
 vendor/etc/virtual-spn-conf-by-efspn.xml
 vendor/etc/virtual-spn-conf-by-imsi.xml
 vendor/lib/hw/radio.fm.mt6580.so
+vendor/lib/libaedv.so
 vendor/lib/libccci_util.so
+vendor/lib/libmrdumpv.so
 vendor/lib/libmsbc_mtk.so
 vendor/lib/libmtcloader.so
 vendor/lib/libmtklimiter_vendor.so
