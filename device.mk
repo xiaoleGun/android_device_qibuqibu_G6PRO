@@ -214,7 +214,7 @@ PRODUCT_PACKAGES += \
 
 # WiFi
 PRODUCT_PACKAGES += \
-    android.hardware.wifi.supplicant@1.3.vendor \
+    android.hardware.wifi.supplicant@1.2.vendor \
     android.hardware.wifi.hostapd@1.2.vendor
 
 PRODUCT_PACKAGES += \

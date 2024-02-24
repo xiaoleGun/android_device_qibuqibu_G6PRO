@@ -79,14 +79,12 @@ function blob_fixup() {
         vendor/bin/netdagent)
             "${PATCHELF}" --replace-needed "liblogwrap.so" "liblogwrap-v27.so" "${2}"
             ;;
-        vendor/bin/hw/android.hardware.wifi@1.0-service)
-            "${PATCHELF}" --add-needed "libbase_shim.so" "${2}"
-            "${PATCHELF}" --replace-needed "android.hardware.wifi@1.0.so" "android.hardware.wifi@1.0-v27.so" "${2}"
-            "${PATCHELF}" --replace-needed "android.hardware.wifi@1.1.so" "android.hardware.wifi@1.1-v27.so" "${2}"
-            ;;
         vendor/lib/hw/audio.primary.mt6580.so)
             sed -i 's/\/system\/lib\([^\/])/\/vendor\/lib\1/g' "${2}"
             ;;
+        vendor/etc/init/init.wlan_drv.rc)
+            sed -i 's/wlan_drv_${ro.vendor.wlan.gen}/wlan_drv/g' "${2}"
+            ;; 
     esac
 }
 

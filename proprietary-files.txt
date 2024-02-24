@@ -354,27 +354,21 @@ vendor/lib/libudf.so
 vendor/lib/hw/android.hardware.vibrator@1.0-impl.so
 vendor/lib/hw/vibrator.default.so
 
-# WiFi
-lib/android.hardware.wifi@1.0.so:vendor/lib/android.hardware.wifi@1.0-v27.so
-lib/android.hardware.wifi@1.1.so:vendor/lib/android.hardware.wifi@1.1-v27.so
-vendor/bin/hostapd
-vendor/bin/hw/android.hardware.wifi@1.0-service
-vendor/bin/hw/wpa_supplicant
-vendor/bin/wifi2agps
-vendor/bin/wifimac
-vendor/bin/wmt_concurrency
-vendor/bin/wmt_launcher
-vendor/bin/wmt_loader
-vendor/bin/wmt_loopback
-vendor/etc/init/android.hardware.wifi@1.0-service.rc
-vendor/etc/init/hostapd.android.rc
-vendor/etc/init/init.wlan_drv.rc
-vendor/etc/init/init.wmt_chrdev_wifi.rc
-vendor/etc/init/init.wmt_drv.rc
-vendor/etc/init/wifi2agps.rc
-vendor/etc/init/wifimac.rc
-vendor/lib/libwapi.so
-vendor/lib/libwifi-hal.so
-vendor/lib/libwpa_client.so
-vendor/lib/vendor.mediatek.hardware.wifi.hostapd@1.0_vendor.so
-vendor/lib/vendor.mediatek.hardware.wifi.supplicant@1.1_vendor.so
+# WiFi - from A2_H01_S001_20200703_RU
+vendor/bin/hw/android.hardware.wifi@1.0-service-lazy-mediatek|c2af81f0a340a1c23bc865072dd7b04c5813111a|03a30f1ca015739b26fa5b794aee8962a2a27cfb
+vendor/bin/hw/hostapd|2a6752d318ea12c84a2097d872d45e579a840551
+vendor/bin/hw/wpa_supplicant|59810becbd40fbdfdc2dccf9679042fd16ec9823
+vendor/bin/wlan_assistant|930f0490456e5b3e23dc61cffe13029182b8c6a3
+vendor/bin/wmt_launcher|850fb68f93939c7c9520dc5eb51c9cd25d2dc2cb
+vendor/bin/wmt_loader|4c50f4f99b1636fd3bd489384625bd9beaba1381
+vendor/etc/init/android.hardware.wifi@1.0-service-lazy-mediatek.rc|bd3726847a0068d4e252b2d4f5c168b38b982074
+vendor/etc/init/hostapd.android.rc|0f8128bb83c4cbe80760f1a040960cfe439d2d6f
+vendor/etc/init/init.wlan_drv.rc|5bbebe33ade8fed48a6a8707aad623260d6ebe94|bf9435b73d411d6af73f1240178be05de8f37bc6
+vendor/etc/init/init.wmt_drv.rc|6f1c58212a8222c562d08c9bb17db1135b6e89ad
+vendor/etc/init/wlan_assistant.rc|32ed0c40b58acc747c83bf467dde7f72634e9732
+vendor/lib/libwapi.so|617cfd4eda6ff181bae68fd01b200fa188cd7f99
+vendor/lib/libwifi-hal.so|2c3661f1f24da311068db50965ffbe0fc61f2aeb
+vendor/lib/libwifitest.so|919eddf1d66c71b087608f4ba41d48341dff26af
+vendor/lib/libwpa_client.so|26de4e13148f4285e9100f43751100c9f1b86c2d
+vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.0.so|1b38c5f4e5413715c7ae5c9533b321879828c5f5
+vendor/lib/vendor.mediatek.hardware.wifi.supplicant@2.1.so|a2b699c75251bb99106d6bce49b3eb232e1d2c80

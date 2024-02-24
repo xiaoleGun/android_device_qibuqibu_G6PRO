@@ -262,14 +262,13 @@ persist.log.tag.WfoApp=I
 persist.log.tag.tel_log_ctrl=1
 
 # WiFi
+ro.vendor.wifi.sap.interface=ap0
 mediatek.wlan.chip=CONSYS_MT6735
 mediatek.wlan.module.postfix=_consys_mt6735
-wfd.dummy.enable=1
-wfd.iframesize.level=0
-persist.mtk.wcn.coredump.mode=0
-persist.mtk.wcn.combo.chipid=-1
-persist.mtk.wcn.patch.version=-1
-persist.mtk.wcn.dynamic.dump=0
-persist.mtk.connsys.poweron.ctl=0
-service.wcn.driver.ready=no
-ro.mtk_wlan_support=1
+ro.vendor.wfd.dummy.enable=1
+ro.vendor.wfd.iframesize.level=0
+persist.vendor.connsys.chipid=-1
+persist.vendor.connsys.patch.version=-1
+persist.vendor.connsys.dynamic.dump=0
+vendor.connsys.driver.ready=no
+persist.vendor.connsys.fm_chipid=soc
