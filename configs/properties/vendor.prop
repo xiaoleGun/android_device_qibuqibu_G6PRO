@@ -272,3 +272,12 @@ persist.vendor.connsys.patch.version=-1
 persist.vendor.connsys.dynamic.dump=0
 vendor.connsys.driver.ready=no
 persist.vendor.connsys.fm_chipid=soc
+
+wfd.dummy.enable=1
+wfd.iframesize.level=0
+persist.mtk.wcn.coredump.mode=0
+persist.mtk.wcn.combo.chipid=-1
+persist.mtk.wcn.patch.version=-1
+persist.mtk.wcn.dynamic.dump=0
+persist.mtk.connsys.poweron.ctl=0
+service.wcn.driver.ready=no
