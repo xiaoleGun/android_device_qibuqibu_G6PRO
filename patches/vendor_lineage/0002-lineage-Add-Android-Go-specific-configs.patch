@@ -1,0 +1,85 @@
+From 540027cf0bec667e2420506bc58159baa45ef2fe Mon Sep 17 00:00:00 2001
+From: Bruno Martins <bgcngm@gmail.com>
+Date: Tue, 1 Dec 2020 21:22:46 +0000
+Subject: [PATCH 2/2] lineage: Add Android Go specific configs
+
+Trebuchet is also available as a Go version, so modify the existing
+configs to allow it to be shipped in Android Go enabled devices.
+
+Change-Id: I29f203b3fa19bc955976ee6c3da4142a4ab325bf
+---
+ config/common.mk               |  3 +--
+ config/common_full_go_phone.mk |  5 +++++
+ config/common_mini_go_phone.mk |  5 +++++
+ config/common_mobile.mk        | 15 ++++++++++++++-
+ 4 files changed, 25 insertions(+), 3 deletions(-)
+ create mode 100644 config/common_full_go_phone.mk
+ create mode 100644 config/common_mini_go_phone.mk
+
+diff --git a/config/common.mk b/config/common.mk
+index 2fe9cb01..bea5ac49 100644
+--- a/config/common.mk
++++ b/config/common.mk
+@@ -185,8 +185,7 @@ endif
+ 
+ # Dex preopt
+ PRODUCT_DEXPREOPT_SPEED_APPS += \
+-    SystemUI \
+-    TrebuchetQuickStep
++    SystemUI
+ 
+ PRODUCT_ENFORCE_RRO_EXCLUDED_OVERLAYS += vendor/lineage/overlay
+ DEVICE_PACKAGE_OVERLAYS += vendor/lineage/overlay/common
+diff --git a/config/common_full_go_phone.mk b/config/common_full_go_phone.mk
+new file mode 100644
+index 00000000..1e5e9046
+--- /dev/null
++++ b/config/common_full_go_phone.mk
+@@ -0,0 +1,5 @@
++# Set Lineage specific identifier for Android Go enabled products
++PRODUCT_TYPE := go
++
++# Inherit full common Lineage stuff
++$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+diff --git a/config/common_mini_go_phone.mk b/config/common_mini_go_phone.mk
+new file mode 100644
+index 00000000..627c0d9e
+--- /dev/null
++++ b/config/common_mini_go_phone.mk
+@@ -0,0 +1,5 @@
++# Set Lineage specific identifier for Android Go enabled products
++PRODUCT_TYPE := go
++
++# Inherit mini common Lineage stuff
++$(call inherit-product, vendor/lineage/config/common_mini_phone.mk)
+diff --git a/config/common_mobile.mk b/config/common_mobile.mk
+index e15120eb..081cc936 100644
+--- a/config/common_mobile.mk
++++ b/config/common_mobile.mk
+@@ -32,9 +32,22 @@ PRODUCT_PACKAGES += \
+     LockClock \
+     Profiles \
+     Seedvault \
+-    TrebuchetQuickStep \
+     WeatherProvider
+ 
++ifeq ($(PRODUCT_TYPE), go)
++PRODUCT_PACKAGES += \
++    TrebuchetQuickStepGo
++
++PRODUCT_DEXPREOPT_SPEED_APPS += \
++    TrebuchetQuickStepGo
++else
++PRODUCT_PACKAGES += \
++    TrebuchetQuickStep
++
++PRODUCT_DEXPREOPT_SPEED_APPS += \
++    TrebuchetQuickStep
++endif
++
+ # Accents
+ PRODUCT_PACKAGES += \
+     LineageBlackTheme \
+-- 
+2.39.3 (Apple Git-145)
+

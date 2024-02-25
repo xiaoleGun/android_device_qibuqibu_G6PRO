@@ -4,15 +4,19 @@
 # SPDX-License-Identifier: Apache-2.0
 #
 
-if [ ! -f device/qibuqibu/G6PRO/patches/vendor_lineage_prebuild_kernel.patch ];then
-    mkdir -p device/qibuqibu/G6PRO/patches
-    wget -O device/qibuqibu/G6PRO/patches/vendor_lineage_prebuild_kernel.patch https://gist.githubusercontent.com/xiaoleGun/c76817bb79e7916dcc9bf42319f77f62/raw/5622c18f25b7fcb56092cb98894fcc759b8d40b8/vendor_lineage_prebuild_kernel.patch
-fi
-
 cd vendor/lineage
-if [ -n  "$(git apply --check ../../device/qibuqibu/G6PRO/patches/vendor_lineage_prebuild_kernel.patch &> /dev/null)" ];then
-    git am ../../device/qibuqibu/G6PRO/patches/vendor_lineage_prebuild_kernel.patch
+if [ -z  "$(git apply --check ../../device/qibuqibu/G6PRO/patches/vendor_lineage/0001-soong-Remove-generated_kernel_includes-for-use-prebu.patch &> /dev/null)" ];then
+    git am ../../device/qibuqibu/G6PRO/patches/vendor_lineage/0001-soong-Remove-generated_kernel_includes-for-use-prebu.patch
+elif [ -z  "$(git apply --check ../../device/qibuqibu/G6PRO/patches/vendor_lineage/0002-lineage-Add-Android-Go-specific-configs.patch &> /dev/null)" ];then
+    git am ../../device/qibuqibu/G6PRO/patches/vendor_lineage/0002-lineage-Add-Android-Go-specific-configs.patch
 else
     echo "Check vendor/lineage or duplicate apply patches, please ignore."
 fi
 cd ../..
+cd packages/apps/Trebuchet
+if [ -z  "$(git apply --check ../../../device/qibuqibu/G6PRO/patches/packages_apps_Trebuchet/0001-TrebuchetGo-Add-Go-specific-default-workspace.patch &> /dev/null)" ];then
+    git am ../../../device/qibuqibu/G6PRO/patches/packages_apps_Trebuchet/0001-TrebuchetGo-Add-Go-specific-default-workspace.patch
+else
+    echo "Check packages/apps/Trebuchet or duplicate apply patches, please ignore."
+fi
+cd ../../..

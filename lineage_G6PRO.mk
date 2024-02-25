@@ -10,6 +10,7 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/go_defaults.mk)
 
 # Inherit some common Lineage stuff.
 $(call inherit-product, vendor/lineage/config/common_mini_tablet_wifionly.mk)
+PRODUCT_TYPE := go
 
 # Inherit from G6PRO device
 $(call inherit-product, device/qibuqibu/G6PRO/device.mk)
